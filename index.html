@@ -1,0 +1,57 @@
+
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="bootstrap/bootstrapCSS.css">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Alarm Clock</title>
+</head>
+<body>
+    <header id="selection">
+        <a href="index.html" class="active">Alarm</a>
+        <a href="timer.html">Timer</a>
+    </header>
+    <div class="dark-mode">
+        <label for="darkMode">Dark Mode</label> 
+        <input type="checkbox" class="dark-mode-toggle" id="darkMode">
+    </div>
+    <div class="analog-clock">
+        <div class="clock-hand second" data-second-hand></div>
+        <div class="clock-hand minute" data-minute-hand></div>
+        <div class="clock-hand hour" data-hour-hand></div>
+    </div>
+    <div class="digital-clock">
+        <div id="time">
+            <span id="hour">00:</span>
+            <span id="minute">00:</span>
+            <span id="second">00</span>
+        </div>
+    </div>
+    <div class="date"></div>
+
+    <div class="alarms"></div>
+    <div id="alarmOptions" style="display: none;">
+        <button class="snooze-alarm">Snooze 2 minutes</button>
+        <button class="stop-alarm">Stop alarm</button>
+    </div>
+
+    <div class="alarm-modal">
+        <input type="datetime-local"  id="alarmTime">
+        <button class="add-alarm">Set ALarm</button>
+    </div>
+
+
+    <audio src="sounds/alarming.mp3" data-sound></audio>   
+    
+    
+    <script src="bootstrap/bootstrapJQuery.js"></script>
+    <script src="bootstrap/bootstrapPopperJS.js"></script>
+    <script src="bootstrap/bootstrapJS.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

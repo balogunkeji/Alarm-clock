@@ -1,0 +1,274 @@
+
+
+body{
+    background: #eee;
+}
+
+body.change {
+    background-color: hsl(230, 17%, 14%);
+}
+
+/*Header*/
+
+a {
+    color: hsl(230, 22%, 74%);
+}
+
+a:hover {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.active {
+    font-size: 1.8rem;
+    color: hsl(233, 13%, 73%);
+    font-weight: 700;
+}
+
+#selection {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 0 auto;
+}
+
+/* dark mode  */
+.dark-mode{
+    width: 150px;
+    font-size: .8rem ;
+    font-weight: 600;
+    margin: 1rem auto 0 ; 
+    display: flex;
+    color: hsl(230, 22%, 74%);
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 2; 
+}
+
+.dark-mode input[type = 'checkbox']{
+position: relative;
+appearance: none;
+-webkit-appearance: none;
+-moz-appearance: none; 
+width: 40px;
+height: 15px;
+background: hsl(230, 22%, 74%); 
+outline: none;
+border-radius: 20px;
+box-shadow: inset 0 0 10px rgba(0, 0, 0, .4);
+
+}
+
+.dark-mode input:checked[type="checkbox"]{
+background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+.dark-mode input[type="checkbox"]::before{
+content: '';
+width: 1.5rem;
+height: 1.5rem;
+background-color: #fff;
+position: absolute;
+border-radius: 50%;
+top: -.25rem;
+left: 0px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, .4);
+transition: left .5s;
+}
+
+
+.dark-mode input:checked[type="checkbox"]::before{
+left: 24px;
+background-color: hsl(230, 17%, 14%);
+} 
+/* dark mode end */
+
+/* analog-clock style */
+.analog-clock{
+    width: 16rem;
+    height: 16rem;
+    margin: 0 auto;
+    margin-top: 30px;
+    background: #eee;
+    border-radius: 50%;
+    border-bottom: 4px solid tomato;
+    box-shadow: 
+    -5px -5px 10px 0 rgba(255, 255, 255, 1),
+    12px 12px 12px 0 rgba(0, 0, 0, 0.03);
+    position: relative;
+}
+.change.analog-clock{
+    background: hsl(230, 17%, 14%);
+    box-shadow: 
+    -5px -5px 15px 0 rgba(73, 73, 73, 0.8),
+    12px 12px 12px 0 rgba(0, 0, 0, 0.03);
+}
+
+
+.clock-hand{
+position: absolute;
+bottom: 50%;
+left: 50%;
+width: 10px;
+height: 40%;
+background: white;
+border-radius:10px 10px 0 0;
+transform-origin: bottom;
+z-index: 2;
+transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg))
+}
+
+.analog-clock::after{
+content: ' ';
+position: absolute;
+background: tomato;
+z-index: 4;
+height: 15px;
+width: 15px;
+top:50%;
+left:50%;
+border-radius: 50%;
+transform: translate(-50%, -50%);
+}
+
+.second{
+--rotation: 30;
+width: 3px;
+height: 45%;
+background: tomato; 
+z-index: 3;
+}
+
+.minute{
+width: 7px;
+height: 40%;
+}
+
+.hour{
+width: 10px;
+height: 32%;
+}
+
+/* analog clock end */
+
+/* digital clock start */
+.digital-clock{
+position: relative;
+text-align: center;
+margin: 1rem 0;
+font-size: 3rem;
+}
+
+#time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 10px;
+}
+
+.change#time{
+    color:hsl(230, 22%, 74%);
+}
+/* digital clock end */
+
+/* Set date style start */
+.date{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+}
+
+.change.date{
+    color: hsl(230, 22%, 74%);
+}
+/* Set date style end*/
+
+/* ALARM CLOCK  */
+
+.alarm-modal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    margin-top: 3rem;
+}
+
+#alarmTime{
+    margin-right: .5rem;
+}
+
+.add-alarm{
+    background: tomato;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+.alarms{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+}
+
+
+#alarmOptions{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+}
+
+.snooze-alarm{
+    margin-right: 1.2rem;
+}
+
+/* ALARM CLOCK END */
+
+
+
+#time h3 {
+    margin-bottom: 0;
+}
+
+#time p {
+    font-size: 12px;
+}
+
+select {
+    margin-left: 25%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 48%;
+}
+
+/* Toggle Section*/
+
+.toggle-general {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin: 0 auto;
+}
+
+strong {
+    font-size: 15px;
+}
+
+#plus {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    background-color: tomato;
+    border-radius: 50%;
+    width: 3em;
+    height: 3em;
+    transform: translateX(-50%)
+}
